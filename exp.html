@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Depth First Search</title>
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <style>
+         .exp {
+             display: none;
+         }
+        </style>
+    </head>
+
+    <body>
+        <div class="exp" title="Depth First Traversal">
+            <div class="longt">
+                <h1 class="hlongt">Introduction to DFS</h1>
+            </div>
+            <div class="preamble">
+                <div class="art req" title="DFS Video Introduction">
+                    <div class="longt">
+                        <h2 class="hlongt">Welcome to DFS Experiment!</h2>
+                    </div>
+                    <div class="description">
+                        <p>Video introduction to DFS experiment should be displayed here!</p>
+                    </div>
+                </div>
+
+                <div class="art txt" title="Estimation">
+                    <div class="longt">
+                        <h2 class="hlongt">Estimated Time</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>1 hour</p>
+                    </div>
+                </div>
+
+                <div class="art txt" title="Prerequisites">
+                    <div class="longt">
+                        <h2 class="hlongt">Prerequisites of the Experiment</h2>
+                    </div>
+                    <div class="art-body">
+                        <ul>
+                            <li>
+                                Basic knowledge of
+                                <ul>
+                                    <li>
+                                        <a href="https://www.geeksforgeeks.org/array-data-structure/">Arrays</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.w3schools.com/python/python_lists.asp">Lists</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>And above all, a curiosity to learn and explore!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="art txt" title="Overview">
+                    <div class="longt">
+                        <h2 class="hlongt">Overview of the Experiment</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>The experiment features a series
+                           of modules with video lectures,
+                           hands-on practice exercises and
+                           quizzes for self analysis.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="art txt" title="Learning Objectives">
+                    <div class="longt">
+                        <h2 class="hlongt">Learning Objectives of the Experiment</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>In this experiment, we will:<br>
+                            <ul>
+                                <li>
+                                    Understand the basics of
+                                    graphs and their
+                                    representations.
+                                </li>
+                                <li>
+                                    Understand the working
+                                    of Depth First Traversal
+                                    Algorithm for searching
+                                    nodes.
+                                </li>
+                                <li>
+                                    Given a graph,
+                                    understand the
+                                    progression of the Depth
+                                    First Traversal
+                                    Algorithm and search for
+                                    particular nodes.
+                                </li>
+                                <li>
+                                    Demonstrate the
+                                    knowledge of time
+                                    complexity of the Depth
+                                    First Search Traversal
+                                    algorithm.
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lu" title="Pre-test">
+                <div class="longt">
+                    <h1 class="hlongt">Pre-test of the Experiment</h1>
+                </div>
+
+                <div class="preamble">
+                    <div class="art txt" title="Estimation">
+                        <div class="longt">
+                            <h2 class="hlongt">Estimated Time</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>45 minutes</p>
+                        </div>
+                    </div>
+
+                    <div class="art txt" title="Introduction">
+                        <div class="longt">
+                            <h2 class="hlongt">Introduction to Pre-test of the Experiment</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>Pretest includes questions on
+                                <ul>
+                                    <li><a href="https://www.geeksforgeeks.org/array-data-structure/" target="_blank">Arrays</a></li>
+                                    <li><a href="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/" target="_blank">Graphs
+                                        (Directed and Undirected) and Trees</a>
+                                    </li>
+                                </ul>
+                                Read the questions in the
+                                quiz section and select the
+                                correct option from the ones
+                                provided. Please note that
+                                some questions may have more
+                                than one correct response.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="task" title="Basics of Graphs">
+                    <div class="longt">
+                        <h2 class="hlongt">Basics of Graphs</h2>
+                    </div>
+                    <div class="art req" title="Graphs Introduction">
+                        <div class="longt">
+                            <h2 class="hlongt">Graphs Introduction</h2>
+                        </div>
+                        <div class="description">
+                            <p>Video of Graphs Introduction.</p>
+                        </div>
+                    </div>
+
+                    <div class="art txt" title="Definition">
+                        <div class="longt">
+                            <h2 class="hlongt">Definition</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>A graph is a pictorial
+                               representation of a set of
+                               objects where some pairs of
+                               objects are connected by
+                               links. The interconnected
+                               objects are represented by
+                               points termed as <b>vertices</b>,
+                               and the links that connect
+                               the vertices are called
+                               <b>edges</b>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="art req" title="Pictorial Representation of Graph">
+                        <div class="longt">
+                            <h2 class="hlongt">Pictorial Representation of Graph</h2>
+                        </div>
+                        <div class="description">
+                            <p>Pictorial Representation of Graph</p>
+                            <p>A diagram depicting the vertices and edges in a graph.</p>
+                        </div>
+                    </div>
+
+                    <div class="art txt" title="Types of Graph">
+                        <div class="longt">
+                            <h2 class="hlongt">Types of Graphs</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>
+                                <ul>
+                                    <li>Undirected Graph</li>
+                                    <li>Directed Graph</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="art req" title="Undirected Graph">
+                        <div class="longt">
+                            <h2 class="hlongt">Undirected Graph</h2>
+                        </div>
+                        <div class="description">
+                            <p>Undirected Graph</p>
+                        </div>
+                    </div>
+
+                    <div class="art req" title="Directed Graph">
+                        <div class="longt">
+                            <h2 class="hlongt">Directed Graph</h2>
+                        </div>
+                        <div class="description">
+                            <p>Directed Graph</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="task" title="Graph Traversals">
+                    <div class="longt">
+                        <h2 class="hlongt">Graph traversal</h2>
+                    </div>
+
+                    <div class="art txt" title="Definition">
+                        <div class="longt">
+                            <h2 class="hlongt">Theory of Graph Traversal Techniques</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>In computer science, graph
+                               traversal (also known as
+                               graph search) refers to the
+                               process of visiting (checking
+                               and/or updating) each vertex
+                               in a graph. Such traversals
+                               are classified by the order
+                               in which the vertices are
+                               visited.  Tree traversal is a
+                               special case of graph
+                               traversal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="art txt" title="Techniques of Graph traversal">
+                        <div class="longt">
+                            <h2 class="hlongt">Techniques of Graph traversal</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>
+                                <ul>
+                                    <li><b>DFS</b>- A
+                                        depth-first search
+                                        (DFS) is an
+                                        algorithm for
+                                        traversing a finite
+                                        graph. DFS visits
+                                        the child vertices
+                                        before visiting the
+                                        sibling vertices,
+                                        that is, it
+                                        traverses the depth
+                                        of any particular
+                                        path before
+                                        exploring its
+                                        breadth. A stack
+                                        (often the program's
+                                        call stack via
+                                        recursion) is
+                                        generally used when
+                                        implementing the
+                                        algorithm.
+                                    </li>
+                                    <li>
+                                        <b>BFS</b>- A
+                                        breadth-first search
+                                        (BFS) is another
+                                        technique for
+                                        traversing a finite
+                                        graph. BFS visits
+                                        the neighbour
+                                        vertices before
+                                        visiting the child
+                                        vertices, and a
+                                        queue is used in the
+                                        search process. This
+                                        algorithm is often
+                                        used to find the
+                                        shortest path from
+                                        one vertex to
+                                        another.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz" title="Pre-test Quiz">
+                    <div class="longt">
+                        <h2 class="hlongt">Pre-test Quiz of the Experiment</h2>
+                    </div>
+                    <div class="mcq">
+                        <div class="preamble">
+                            <div class="art txt" title="question1">
+                                <div class="art-body">
+                                    <p>Q1. Which of the following is true?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c1">
+                                    <div class="art-body">
+                                        <p>(A) A graph may contain no edges and many vertices</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c2">
+                                    <div class="art-body">
+                                        <p>(B) A graph may contain many edges and no vertices</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c3">
+                                    <div class="art-body">
+                                        <p>(C) A graph may contain no edges and no vertices</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c4">
+                                    <div class="art-body">
+                                        <p>(D) None of the mentioned</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explanation">
+                            <div class="art txt" title="Explanation">
+                                <div class="art-body">
+                                    <p> Graphs consist of many edges and vertices.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mcq">
+                        <div class="preamble">
+                            <div class="art txt" title="question2">
+                                <div class="art-body">
+                                    <p>Q2. Which of the following is true about graphs?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c1">
+                                    <div class="art-body">
+                                        <p>(A) Each node can only store integers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c2">
+                                    <div class="art-body">
+                                        <p>(B) Consecutive nodes need to be stored sequentially in memory</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c3">
+                                    <div class="art-body">
+                                        <p>(C) Both of the above</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c4">
+                                    <div class="art-body">
+                                        <p>(D) None of the above</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explanation">
+                            <div class="art txt" title="Explanation">
+                                <div class="art-body">
+                                    <p>Consecutive nodes need not be stored sequentially in memory.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lu" title="DFS">
+                <div class="longt">
+                    <h2 class="hlongt">Depth First Traversal</h2>
+                </div>
+
+                <div class="preamble">
+                    <div class="art txt" title="Estimation">
+                        <div class="longt">
+                            <h2 class="hlongt">Estimated Time</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>25 minutes</p>
+                        </div>
+                    </div>
+
+                    <div class="art txt" title="Introduction">
+                        <div class="longt">
+                            <h2 class="hlongt">Introduction to Depth First Traversal</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>Welcome to this module on DFS! Take a look at what you will go through in this module.
+                                <ul>
+                                    <li>What is DFS and when is it used?</li>
+                                    <li>Practice DFS Algorithm</li>
+                                    <li>Interactive DFS Exercise</li>
+                                    <li>A quiz to check your understanding of DFS
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="task" title="DFS : Concept">
+                    <div class="longt">
+                        <h2 class="hlongt">Depth First Search (DFS)</h2>
+                    </div>
+                    <div class="art txt" title="DFS Definition">
+                        <div class="longt">
+                            <h2 class="hlongt">Definition</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>Depth First Search algorithm
+                               is a recursive algorithm that
+                               uses the idea of
+                               backtracking. It involves
+                               exhaustive searches of all
+                               the nodes by going ahead, if
+                               possible, else by
+                               backtracking.<br> Here, the
+                               word backtrack means that
+                               when you are moving forward
+                               and there are no more nodes
+                               along the current path, you
+                               move backwards on the same
+                               path to find nodes to
+                               traverse. All the nodes will
+                               be visited on the current
+                               path till all the unvisited
+                               nodes have been traversed
+                               after which the next path
+                               will be selected.
+                            </p>
+                        </div>
+                    </div>                    
+                    <div class="art req" title="Example : DFS">
+                        <div class="longt">
+                            <h2 class="hlongt">DFS Example</h2>
+                        </div>
+                        <div class="description">
+                            DFS traversal Example.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="task" title="DFS : Algorithm">
+                    <div class="longt">
+                        <h2 class="hlongt">DFS Algorithm</h2>
+                    </div>
+                    <div class="art req" title="DFS Algorithm ">
+                        <div class="longt">
+                            <h2 class="hlongt">Explanation of DFS Algo</h2>
+                        </div>
+                        <div class="description">
+                            <p>Video explaining DFS Algorithm.</p>
+                        </div>
+                    </div>
+                    <div class="art txt" title="DFS Algorithm">
+                        <div class="longt">
+                            <h2 class="hlongt">Understanding the Depth First Search (DFS) Algorithm</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>
+                                Depth first search (DFS)
+                                algorithm starts with the
+                                initial node of the graph G, and
+                                then goes deeper and deeper
+                                until we find the goal node or
+                                the node which has no
+                                children. The algorithm, then
+                                backtracks from the dead end
+                                towards the most recent node
+                                that is yet to be completely
+                                explored.<br> The data structure
+                                which is being used in DFS is
+                                stack.
+                                <br><br>
+                                <b>STEP 1: </b>Start by putting
+                                any one of the graph's vertices
+                                on top of a stack (acts as
+                                source node of DFS).
+                                <br>
+                                <b>STEP 2: </b>Take the top item
+                                of the stack and set its visited
+                                as 1.
+                                <br>
+                                <b>STEP 3: </b>Create a list of
+                                that vertex's adjacent
+                                nodes. Add the ones whose
+                                visited is 0 to the top of
+                                stack.
+                                <br>
+                                <b>STEP 4: </b>Keep repeating
+                                steps 2 and 3 until the stack is
+                                empty.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="art req" title="Example : DFS Algorithm ">
+                        <div class="longt">
+                            <h2 class="hlongt">DFS Algorithm Example</h2>
+                        </div>
+                        <div class="description">
+                            <p>Image explaining DFS Algorithm.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="task" title="DFS : Demo">
+                    <div class="longt">
+                        <h2 class="hlongt">Depth First Search Demo</h2>
+                    </div>
+
+                    <div class="art req" title="DFS Demo Graphs Art">
+                        <div class="longt">
+                            <h2 class="hlongt"></h2>
+                        </div>
+                        <div class="description">
+                            <p>A random graph is shown on screen.
+                                <br> Student can click any
+                                node of the graph.
+                                <br> Once a node is clicked,
+                                the visual representation of
+                                DFS starts from that node
+                                <br> Student can change the
+                                graph by clicking generate
+                                graph button.
+                                <br> Student can click on
+                                different nodes and master
+                                the DFS algorithm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="task" title="DFS Practice">
+                    <div class="longt">
+                        <h2 class="hlongt">Practice Depth First Traversal</h2>
+                    </div>
+
+                    <div class="art req" title="DFS Practice Art">
+                        <div class="longt">
+                            <h2 class="hlongt">Interactive Artefact</h2>
+                        </div>
+                        <div class="description">
+                            <p>Student is given a graph
+                                <br> Student will be given
+                                hints for steps for DFS.
+                                <br> Steps can be like:<br>
+                                1)Pick 0 as the root node.<br>
+                                2)Pick any of the children of the root node.<br>
+                                3)Repeat above process, if
+                                there's no children of node,
+                                then go to last parent and
+                                pick the child which is not
+                                visited.<br>
+                                <br> Student has to perform
+                                DFS step-wise
+                                <br> After finishing DFS on
+                                graph, he can click generate
+                                random graph and practice
+                                again.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="task" title="DFS Exercise">
+                    <div class="longt">
+                        <h2 class="hlongt">Check your understanding of Depth First Traversal</h2>
+                    </div>
+                    <div class="art req" title="DFS Exercise Art">
+                        <div class="longt">
+                            <h2 class="hlongt">Interactive Module</h2>
+                        </div>
+                        <div class="description">
+                            <p>Student is given a graph and starting node as the question.
+                                <br> Student needs to click
+                                the nodes of graph as they
+                                appear in DFS algorithm
+                                <br> Nodes follow a
+                                particular color scheme to
+                                differentiate between
+                                white,grey and black nodes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz" title="DFS Quiz">
+                    <div class="longt">
+                        <h2 class="hlongt">Quiz on Depth First Traveral</h2>
+                    </div>
+                    <div class="mcq">
+                        <div class="preamble">
+                            <div class="art txt" title="question1">
+                                <div class="art-body">
+                                    <p>Q1. Time Complexity of DFS is? (V – number of vertices, E – number of edges)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c1">
+                                    <div class="art-body">
+                                        <p>(A) O(V + E)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c2">
+                                    <div class="art-body">
+                                        <p>(B) O(V)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c2">
+                                    <div class="art-body">
+                                        <p>(C) O(E)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c2">
+                                    <div class="art-body">
+                                        <p>(D) None of these</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explanation">
+                            <div class="art txt" title="Explanation">
+                                <div class="art-body">
+                                    <p> The algorithm goes through each vertex and each edge, hence complexity is O(V + E).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mcq">
+                        <div class="preamble">
+                            <div class="art txt" title="question2">
+                                <div class="art-body">
+                                    <p>Q2. The Depth First Search traversal of a graph will result into?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c1">
+                                    <div class="art-body">
+                                        <p>(A) Linked List</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c2">
+                                    <div class="art-body">
+                                        <p>(B) Tree</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c3">
+                                    <div class="art-body">
+                                        <p>(C) Graph with back edges</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c2">
+                                    <div class="art-body">
+                                        <p>(D) None of these</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explanation">
+                            <div class="art txt" title="Explanation">
+                                <div class="art-body">
+                                    <p> Algorithm generates a tree.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lu" title="Analysis">
+                <div class="longt">
+                    <h2 class="hlongt">Analysis of the Experiment</h2>
+                </div>
+                <div class="preamble">
+                    <div class="art txt" title="Estimation">
+                        <div class="longt">
+                            <h2 class="hlongt">Estimated Time</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>20 minutes</p>
+                        </div>
+                    </div>
+
+                    <div class="art txt" title="Introduction">
+                        <div class="longt">
+                            <h2 class="hlongt">Introduction to Analysis of the Experiment</h2>
+                        </div>
+                        <div class="art-body">
+                            Take a look at what we will learn in this module
+                            <ul>
+                                <li>Space and Time complexity of DFS</li>
+                                <li>Comparision of BFS and DFS</li>
+                                <li>Quiz to test your
+                                   understanding on topics
+                                   covered in analysis
+                                   learning unit
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="task" title="Space and Time Complexitiy of DFS">
+                    <div class="longt">
+                        <h2 class="hlongt">Space and Time Complexitiy of DFS</h2>
+                    </div>
+
+                    <div class="art txt" title="Space Complexity of DFS">
+                        <div class="art-body">
+                            <ul>
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.cs.northwestern.edu/academics/courses/311/html/space-complexity.html" target="_blank">Space complexity </a>is a measure of the amount of working storage an algorithm needs. That means how much
+                                            memory, in the worst case, is needed at any point in the algorithm.
+                                        </li>
+                                        <li>
+                                            Let the length
+                                            of longest path
+                                            be m. For each
+                                            node, you have
+                                            to store its
+                                            siblings so that
+                                            when you have
+                                            visited all its
+                                            children, and
+                                            you come back to
+                                            a parent node,
+                                            you know which
+                                            sibling to
+                                            explore
+                                            next. For m
+                                            nodes down the
+                                            path, you will
+                                            have to store b
+                                            nodes extra for
+                                            each of the m
+                                            nodes. So the
+                                            space complexity
+                                            here is O(bm).
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="art txt" title="Time Complexity of BFS">
+                        <div class="art-body">
+                            <ul>
+                                <li>
+                                    <ul>
+                                        <li>
+                                            In computer
+                                            science, the <a href="https://en.wikipedia.org/wiki/Time_complexity" target="_blank">Time
+                                            complexity </a> is
+                                            the
+                                            computational
+                                            complexity that
+                                            describes the
+                                            amount of time
+                                            it takes to run
+                                            an algorithm.
+                                        </li>
+                                        <li>
+                                            Since in the
+                                            worst case
+                                            depth-first
+                                            search has to
+                                            consider all
+                                            paths to all
+                                            possible nodes,
+                                            the time
+                                            complexity of
+                                            depth-first
+                                            search is <b>O(|E| + |V|)</b> where <b>|V|</b> and <b>|E|</b> is the cardinality of set
+                                            of vertices and edges respectively.
+                                        </li>
+                                        <li>
+                                            The complexity
+                                            is this since
+                                            every vertex and
+                                            every edge will
+                                            be explored in
+                                            the worst case.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="task" title="Comparison of BFS with DFS">
+                    <div class="art req" title="BFS and DFS Comparision">
+                        <div class="longt">
+                            <h2 class="hlongt">Distinction between BFS and DFS</h2>
+                        </div>
+                        <div class="description">
+                            <p>Video of BFS and DFS</p>
+                        </div>
+                    </div>
+                    <div class="art txt" title="Differences between BFS and DFS">
+                        <div class="art-body">
+                            <p>
+                                <b> Key Differences Between BFS and DFS</b>
+                                <li>BFS is vertex-based
+                                    algorithm while DFS is
+                                    an edge-based algorithm.
+                                </li>
+                                <li>Queue data structure is
+                                    used in BFS. On the
+                                    other hand, DFS uses
+                                    stack or recursion.
+                                </li>
+                                <li>Memory space is
+                                    efficiently utilized in
+                                    DFS while space
+                                    utilization in BFS is
+                                    not effective.
+                                </li>
+                                <li>BFS is an optimal
+                                    algorithm while DFS is
+                                    not optimal.
+                                </li>
+                                <li>DFS constructs narrow
+                                    and long trees whereas
+                                    BFS constructs wide and
+                                    short tree.
+                                </li>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="art txt" title="BFS traversal on Example graph">
+                        <div class="art-body">
+                            <p>
+                                <li>We have a graph whose
+                                vertices are A, B, C, D, E,
+                                F, G. Considering A as
+                                starting point, the steps
+                                    involved in the process are:
+                                </li>
+                                <li>Vertex A is expanded and
+                                    stored in the queue.
+                                </li>
+                                <li>Vertices B, D and G
+                                    successors of A, are
+                                    expanded and stored in
+                                    the queue. Meanwhile
+                                    Vertex A is removed.
+                                </li>
+                                <li>Now B at the front end
+                                    of the queue is removed
+                                    along with storing its
+                                    successor vertices E and
+                                    F.
+                                </li>
+                                <li>Vertex D at the front
+                                    end of the queue is
+                                    removed, and its
+                                    connected node F is
+                                    already visited.
+                                </li>
+                                <li>Vertex G is removed from
+                                    the queue, and it has
+                                    successor E which is
+                                    already visited.
+                                </li>
+                                <li>Now E and F are removed
+                                    from the queue, and its
+                                    successor vertex C is
+                                    traversed and stored in
+                                    the queue.
+                                </li>
+                                <li>At last C is also
+                                    removed and the queue is
+                                    empty which means we are
+                                    done.
+                                </li>
+                                <li>The generated Output is – A, B, D, G, E, F, C.</li>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="art req" title="BFSs">
+                        <div class="longt">
+                            <h2 class="hlongt">BFS traversal on the Example graph</h2>
+                        </div>
+                        <div class="description">
+                            <p>BFS traversal on the Example graph</p>
+                        </div>
+                    </div>
+
+                    <div class="art txt" title="DFS traversal on Example graph">
+                        <div class="art-body">
+                            <p>
+                                Similar to BFS lets take the
+                                same graph for performing
+                                DFS operations, and the
+                                involved steps are:
+                                
+                                <li>Considering A as the
+                                    starting vertex which is
+                                    explored and stored in
+                                    the stack.
+                                </li>
+                                <li>
+                                    B, the successor vertex of
+                                    A, is stored in the stack.
+                                </li>
+                                <li>Vertex B have two
+                                    successors E and F,
+                                    among them
+                                    alphabetically E is
+                                    explored first and
+                                    stored in the stack.
+                                </li>
+                                <li>The successor of vertex
+                                    E, i.e., G is stored in
+                                    the stack.
+                                </li>
+                                <li>Vertex G has two
+                                    connected vertices, and
+                                    both are already
+                                    visited, so G is popped
+                                    out from the stack.
+                                </li>
+                                <li>Similarly, E is also removed.</li>
+                                <li>Now, vertex B is at the
+                                    top of the stack, its
+                                    another node(vertex) F
+                                    is explored and stored
+                                    in the stack.
+                                </li>
+                                <li>Vertex F has two
+                                    successors C and D,
+                                    between which C is
+                                    traversed first and
+                                    stored in the stack.
+                                </li>
+                                <li>Vertex C has only one
+                                    predecessor which is
+                                    already visited, so it
+                                    is removed from the
+                                    stack.
+                                </li>
+                                <li>Now vertex D connected
+                                    to F is visited and
+                                    stored in the stack.
+                                </li>
+                                <li>As vertex D does not
+                                    have any unvisited
+                                    nodes, therefore D is
+                                    removed.
+                                </li>
+                                <li>Similarly, F, B and A are also popped.</li>
+                                <li>The generated output is – A, B, E, G, F, C, D.</li>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="art req" title="DFS">
+                        <div class="longt">
+                            <h2 class="hlongt">DFS traversal on the Example graph</h2>
+                        </div>
+                        <div class="description">
+                            <p>
+                                DFS traversal on the Example graph
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz" title="Analysis Quiz">
+                    <div class="longt">
+                        <h2 class="hlongt">DFS Analysis Quiz</h2>
+                    </div>
+                    <div class="mcq">
+                        <div class="preamble">
+                            <div class="art txt" title="question1">
+                                <div class="art-body">
+                                    <p>Q1. Time Complexity of DFS is? (V – number of vertices, E – number of edges)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c1">
+                                    <div class="art-body">
+                                        <p>(A) O(V + E)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c2">
+                                    <div class="art-body">
+                                        <p>(B) O(V)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c3">
+                                    <div class="art-body">
+                                        <p>(C) O(E)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c4">
+                                    <div class="art-body">
+                                        <p>(D) None of these</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explanation">
+                            <div class="art txt" title="Explanation">
+                                <div class="art-body">
+                                    <p>Explanation of question 1 for the right answer.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mcq">
+                        <div class="preamble">
+                            <div class="art txt" title="question2">
+                                <div class="art-body">
+                                    <p>Q2. What data-structures are used to implement BFS and DFS respectively</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c1">
+                                    <div class="art-body">
+                                        <p>(A) Linked Lists and Stacks</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c2">
+                                    <div class="art-body">
+                                        <p>(B) Queues and Stacks</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c3">
+                                    <div class="art-body">
+                                        <p>(C) Stacks and Queues</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c4">
+                                    <div class="art-body">
+                                        <p>(D) All of the above</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explanation">
+                            <div class="art txt" title="Explanation">
+                                <div class="art-body">
+                                    <p>Explanation of question 2 for the right answer.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mcq">
+                        <div class="preamble">
+                            <div class="art txt" title="question2">
+                                <div class="art-body">
+                                    <p>Q3. What strategies are used in BFS and DFS traversals respectively</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q3-c1">
+                                    <div class="art-body">
+                                        <p>(A) Level by level and depth wise</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q3-c2">
+                                    <div class="art-body">
+                                        <p>(B) Depth wise and level by level</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q3-c3">
+                                    <div class="art-body">
+                                        <p>(C) Children before siblings and siblings before children</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q3-c4">
+                                    <div class="art-body">
+                                        <p>(D) Siblings before children and children before siblings</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explanation">
+                            <div class="art txt" title="Explanation">
+                                <div class="art-body">
+                                    <p>Explanation of question 3 for the right answer.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lu" title="Post-Test">
+                <div class="longt">
+                    <h2 class="hlongt">Post Test </h2>
+                </div>
+
+                <div class="preamble">
+                    <div class="art txt" title="Estimation">
+                        <div class="longt">
+                            <h2 class="hlongt">Estimated Time</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>10 minutes</p>
+                        </div>
+                    </div>
+
+                    <div class="art txt" title="Post Test Intro">
+                        <div class="longt">
+                            <h2 class="hlongt">Introduction to Post test of the Experiment</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>Post test includes questions
+                               on concepts from the entire
+                               experiment. Read the
+                               questions given below and
+                               select the correct option
+                               from the ones
+                               provided. Please note that
+                               some questions may have more
+                               than one correct response.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz" title="Post test Quiz">
+                    <div class="longt">
+                        <h2 class="hlongt">Post-test Quiz of the Experiment</h2>
+                    </div>
+
+                    <div class="mcq">
+                        <div class="preamble">
+                            <div class="art txt" title="question1">
+                                <div class="art-body">
+                                    <p>Q1. What can be the applications of Depth First Search?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c1">
+                                    <div class="art-body">
+                                        <p>(A) Generating topological sort of a graph</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c2">
+                                    <div class="art-body">
+                                        <p>(B) Generating strongly connected components of a directed graph</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c2">
+                                    <div class="art-body">
+                                        <p>(C) Detecting cycles in the graph</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c2">
+                                    <div class="art-body">
+                                        <p>(D) All of these</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explanation">
+                            <div class="art txt" title="Explanation">
+                                <div class="art-body">
+                                    <p> All of the above are applications of DFS.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mcq">
+                        <div class="preamble">
+                            <div class="art txt" title="question2">
+                                <div class="art-body">
+                                    <p>Q2. In Depth First Search, how many times is a node visited?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c1">
+                                    <div class="art-body">
+                                        <p>(A) Once</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c2">
+                                    <div class="art-body">
+                                        <p>(B) Twice</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c3">
+                                    <div class="art-body">
+                                        <p>(C) Equivalent to number of indegree of the node</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q1-c4">
+                                    <div class="art-body">
+                                        <p>(D) None of these</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explanation">
+                            <div class="art txt" title="Explanation">
+                                <div class="art-body">
+                                    <p> DFS covers each node only once.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mcq">
+                        <div class="preamble">
+                            <div class="art txt" title="question3">
+                                <div class="art-body">
+                                    <p>Q3. While running DFS
+                                       on a directed graph,
+                                       if from vertex 'u',
+                                       we visit a finished
+                                       vertex 'v', then the
+                                       edge(u,v)is a
+                                       cross-edge
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c1">
+                                    <div class="art-body">
+                                        <p>(A) True</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c2">
+                                    <div class="art-body">
+                                        <p>(B) False</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explanation">
+                            <div class="art txt" title="Explanation">
+                                <div class="art-body">
+                                    <p>If v is neither an
+                                       ancestor nor
+                                       descendant of u, then
+                                       edge (u, v) is a
+                                       cross edge.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mcq">
+                        <div class="preamble">
+                            <div class="art txt" title="question4">
+                                <div class="art-body">
+                                    <p>Q4. All Graphs have unique representation on paper.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="false">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c1">
+                                    <div class="art-body">
+                                        <p>(A) True</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice" data-correct="true">
+                            <div class="preamble">
+                                <div class="art txt" title="q2-c2">
+                                    <div class="art-body">
+                                        <p>(B) False</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explanation">
+                            <div class="art txt" title="Explanation">
+                                <div class="art-body">
+                                    <p>A graph can have many representations on paper.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lu" title="Further Readings/References">
+                <div class="longt">
+                    <h2 class="hlongt">Further Readings and References of the Experiment</h2>
+                </div>
+
+                <div class="preamble">
+                    <div class="art txt" title="Explore">
+                        <div class="longt">
+                            <h2 class="hlongt">Explore Depth First Traversal</h2>
+                        </div>
+                        <div class="art-body">
+                            <p>You can explore more about DFS through following resources:</p>
+                            <p>
+                                <h4>Theory</h4>
+                                <ul>
+                                    <li><a href="https://www.youtube.com/watch?v=AfSk24UTFS8">MIT Lecture</a></li>
+                                    <li><a href="https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/">Concept
+                                        Explanation</a></li>
+                                    <li><a href="https://en.wikipedia.org/wiki/Depth-first_search">Wikipedia</a></li>
+                                </ul>
+                            </p>
+                            <p>
+                                <h4>Practice</h4>
+                                <ul>
+                                    <li><a href="https://www.cs.usfca.edu/~galles/visualization/DFS.html">Interactive
+                                        Module</a></li>
+                                    <li><a href="https://visualgo.net/en/dfsbfs?slide=1">VisualGo Visualization</a></li>
+                                </ul>
+                            </p>
+                            <p>
+                                <h4>Quizzes</h4>
+                                <ul>
+                                    <li><a href="https://nptel.ac.in/courses/106106133/Week_9_Solution.pdf">DFS Questions
+                                        and Answers</a></li>
+                                    <li><a href="https://www.geeksforgeeks.org/algorithms-gq/graph-traversals-gq/">GeeksForGeeks
+                                        Quiz</a></li>
+                                    <li><a href="https://www.geeksforgeeks.org/top-10-interview-question-depth-first-search-dfs/">Interview
+                                        Questions</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/loader.js"></script>
+    </body>
+</html>
